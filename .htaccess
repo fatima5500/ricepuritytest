@@ -1,0 +1,8 @@
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+RewriteRule ^blog/score-meaning-guide\.html$ /blog/rice-purity-test-score-meaning/ [R=301,L]
+
+<FilesMatch "^(test_browser\.py|test\.js)$">
+  Require all denied
+</FilesMatch>

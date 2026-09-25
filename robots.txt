@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /test_browser.py
+Disallow: /test.js
+Disallow: /seo.js
+Disallow: /lang/
+Disallow: /ricepurityscores-main/
+
+Sitemap: https://ricepurityscores.com/sitemap.xml
