@@ -2,56 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ricepurityscores.com/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/about-us/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/contact-us/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/privacy-policy/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/terms-and-conditions/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/blog/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/blog/faq.html</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/blog/history-of-the-test.html</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-02</lastmod>
   </url>
   <url>
     <loc>https://ricepurityscores.com/blog/rice-purity-test-score-meaning/</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ricepurityscores.com/average-rice-purity-score-by-age/</loc>
+    <lastmod>2026-10-02</lastmod>
+  </url>
+  <url>
+    <loc>https://ricepurityscores.com/what-is-a-good-rice-purity-score/</loc>
+    <lastmod>2026-10-02</lastmod>
   </url>
 </urlset>

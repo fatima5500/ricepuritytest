@@ -263,6 +263,13 @@
       object-fit: cover;
     }
 
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .blog-card-body {
       padding: 26px 24px;
       flex: 1;
@@ -426,14 +433,50 @@
       }
     }
   </style>
-  <script src="../seo.js" defer></script>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Rice Purity Test Blog and Score Guides">
+  <meta property="og:description" content="Explore Rice Purity Test score guides, history, age benchmarks, FAQs, and edition comparisons in clear, practical articles. Find your guide now.">
+  <meta property="og:url" content="https://ricepurityscores.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rice Purity Scores">
+  <meta property="og:image" content="https://ricepurityscores.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rice Purity Test Blog and Score Guides">
+  <meta name="twitter:description" content="Explore Rice Purity Test score guides, history, age benchmarks, FAQs, and edition comparisons in clear, practical articles. Find your guide now.">
+  <meta name="twitter:image" content="https://ricepurityscores.com/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ricepurityscores.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ricepurityscores.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Rice Purity Test Blog and Score Guides",
+      "item": "https://ricepurityscores.com/blog/"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="site-nav">
     <div class="nav-container">
-      <a href="../index.html" class="nav-brand">
+      <a href="/" class="nav-brand">
         <span>📜 Rice Purity Test</span>
       </a>
 
@@ -441,10 +484,10 @@
 
       <div class="nav-right-group">
         <ul class="nav-links" id="navLinks">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about-us/index.html">About Us</a></li>
-          <li><a href="index.html" class="active">Blog</a></li>
-          <li><a href="../contact-us/index.html">Contact Us</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/blog/" class="active">Blog</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
         </ul>
 
         <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
@@ -467,55 +510,23 @@
     <header class="page-header">
       <h1>Rice Purity Test Blog</h1>
       <p>Discover in-depth analysis, score charts, age benchmarks, and complete guides on life experience testing.</p>
+      <p style="max-width: 820px; margin: 14px auto 0;">Our guides exist for one reason: the number you get at the end of the Rice Purity Test is only interesting when you understand it. Here you will find the full score meaning chart, typical score ranges for every age group, an honest answer to the question everyone asks — is my score good? — plus the story of how a 1924 orientation-week survey at Rice University became an internet tradition, and answers to the questions readers send us most often.</p>
+      <p style="max-width: 820px; margin: 10px auto 0;">New here? Start by <a href="/" style="color: var(--maroon); font-weight: 700;">taking the Rice Purity Test</a> itself — 100 questions, an instant score, and no sign-up — then come back and use these guides to put your result in context.</p>
     </header>
+
+
+    <div style="background: rgba(122,31,31,0.06); border: 1.5px dashed var(--maroon); border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
+      <h2 style="font-family: 'Cinzel', serif; color: var(--maroon); font-size: 1.35rem; margin-bottom: 10px;">&#9733; Featured Post: The Story Behind the Test</h2>
+      <p style="margin-bottom: 10px;">Most people meet the Rice Purity Test the way students have met it for a hundred years — somebody hands it to them, usually laughing. Our featured post this season is the long read: <a href="/blog/history-of-the-test.html" style="color: var(--maroon); font-weight: 700;">the history of the Rice Purity Test</a>, from a handwritten 1924 survey in a Rice University dorm, through photocopies and the campus newspaper, to the 100-question version that ended up on every student's phone. It answers the questions the test itself can't — where the list came from, why it was built for freshmen, and what on earth "MPS" is supposed to mean.</p>
+      <p>If you only read one thing on this blog, make it that one. Everything else here — the charts, the averages, the arguments about good scores — makes more sense once you know the test was never an exam at all, just a very durable icebreaker.</p>
+    </div>
 
     <div class="blog-grid">
       
       <!-- Article 1 Card (Main Featured Post) -->
       <article class="blog-card">
         <div class="blog-card-image">
-          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Chart and Magnifying Glass Illustration">
-            <rect width="400" height="200" fill="#521212"/>
-            <path d="M 0 0 L 400 200 L 0 200 Z" fill="#7a1f1f" opacity="0.4"/>
-            
-            <!-- Grid Lines -->
-            <path d="M 30 40 L 370 40 M 30 80 L 370 80 M 30 120 L 370 120 M 30 160 L 370 160" stroke="#faecc4" stroke-opacity="0.08" stroke-dasharray="4 4" stroke-width="1.5"/>
-            
-            <!-- Chart Board Backplate -->
-            <rect x="40" y="25" width="320" height="150" rx="12" fill="#fdfaf2" fill-opacity="0.08" stroke="#c49635" stroke-opacity="0.4" stroke-width="1.5"/>
-
-            <!-- Bar Graph Bars -->
-            <rect x="70" y="50" width="34" height="100" rx="6" fill="#faecc4"/>
-            <text x="87" y="42" fill="#faecc4" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">95%</text>
-
-            <rect x="125" y="70" width="34" height="80" rx="6" fill="#c49635"/>
-            <text x="142" y="62" fill="#c49635" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">80%</text>
-
-            <rect x="180" y="90" width="34" height="60" rx="6" fill="#9e2b2b"/>
-            <text x="197" y="82" fill="#faecc4" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">62%</text>
-
-            <rect x="235" y="110" width="34" height="40" rx="6" fill="#381313" stroke="#c49635" stroke-width="1"/>
-            <text x="252" y="102" fill="#c49635" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">42%</text>
-
-            <!-- Line Graph -->
-            <path d="M 87 55 L 142 75 L 197 95 L 252 115 L 300 80" stroke="#faecc4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="87" cy="55" r="5" fill="#faecc4" stroke="#7a1f1f" stroke-width="2"/>
-            <circle cx="142" cy="75" r="5" fill="#c49635" stroke="#7a1f1f" stroke-width="2"/>
-            <circle cx="197" cy="95" r="5" fill="#faecc4" stroke="#7a1f1f" stroke-width="2"/>
-            <circle cx="252" cy="115" r="5" fill="#c49635" stroke="#7a1f1f" stroke-width="2"/>
-            <circle cx="300" cy="80" r="5" fill="#faecc4" stroke="#7a1f1f" stroke-width="2"/>
-
-            <!-- Magnifying Glass -->
-            <g transform="translate(170, 15)">
-              <line x1="96" y1="96" x2="135" y2="135" stroke="#000" stroke-opacity="0.3" stroke-width="14" stroke-linecap="round"/>
-              <line x1="96" y1="96" x2="135" y2="135" stroke="#c49635" stroke-width="12" stroke-linecap="round"/>
-              <line x1="96" y1="96" x2="135" y2="135" stroke="#faecc4" stroke-width="4" stroke-linecap="round"/>
-              <circle cx="70" cy="70" r="38" fill="none" stroke="#c49635" stroke-width="7"/>
-              <circle cx="70" cy="70" r="34" fill="#faecc4" fill-opacity="0.15" stroke="#faecc4" stroke-width="2"/>
-              <path d="M 48 48 Q 68 42 85 52" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
-              <text x="70" y="76" fill="#faecc4" font-family="Cinzel, serif" font-weight="900" font-size="16" text-anchor="middle">SCORE</text>
-            </g>
-          </svg>
+          <img src="/images/rice-purity-score-meaning-gauge.jpg" alt="Vintage score gauge illustration for the Rice Purity Test score meaning guide" width="1200" height="800" loading="lazy" decoding="async">
         </div>
         <div class="blog-card-body">
           <div class="blog-card-date">GUIDE • 2026 EDITION</div>
@@ -523,111 +534,29 @@
           <p class="blog-card-excerpt">
             What does your Rice Purity score actually mean? Explore our comprehensive breakdown of score charts, average benchmarks by age group, and score interpretations.
           </p>
-          <a href="rice-purity-test-score-meaning/index.html" class="btn-read-more">Read Full Article &rarr;</a>
+          <a href="/blog/rice-purity-test-score-meaning/" class="btn-read-more">Read Full Article &rarr;</a>
         </div>
       </article>
 
       <!-- Article 2 Card -->
       <article class="blog-card">
         <div class="blog-card-image">
-          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Vintage Scroll and Clock Illustration">
-            <rect width="400" height="200" fill="#381313"/>
-            <circle cx="120" cy="100" r="80" stroke="#c49635" stroke-opacity="0.15" stroke-width="1.5" stroke-dasharray="6 6"/>
-            
-            <!-- Pocket Watch / Clock -->
-            <g transform="translate(45, 25)">
-              <circle cx="65" cy="70" r="54" fill="#521212" stroke="#c49635" stroke-width="6"/>
-              <circle cx="65" cy="70" r="47" fill="#fdfaf2" stroke="#faecc4" stroke-width="2"/>
-              <circle cx="65" cy="10" r="10" fill="none" stroke="#c49635" stroke-width="4"/>
-              <rect x="62" y="18" width="6" height="8" fill="#c49635"/>
-              <text x="65" y="38" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">XII</text>
-              <text x="98" y="74" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="10" text-anchor="middle">III</text>
-              <text x="65" y="106" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="11" text-anchor="middle">VI</text>
-              <text x="32" y="74" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="10" text-anchor="middle">IX</text>
-              <line x1="65" y1="70" x2="48" y2="52" stroke="#7a1f1f" stroke-width="3.5" stroke-linecap="round"/>
-              <line x1="65" y1="70" x2="88" y2="62" stroke="#7a1f1f" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="65" cy="70" r="4" fill="#c49635"/>
-            </g>
-
-            <!-- Scroll -->
-            <g transform="translate(160, 20)">
-              <path d="M 20 20 Q 100 10 180 20 L 175 145 Q 95 135 15 145 Z" fill="#faecc4" stroke="#7a1f1f" stroke-width="2"/>
-              <path d="M 20 20 Q 5 25 15 35 Q 25 25 20 20 Z" fill="#c49635"/>
-              <path d="M 180 20 Q 195 25 185 35 Q 175 25 180 20 Z" fill="#c49635"/>
-              <circle cx="155" cy="125" r="16" fill="#7a1f1f" stroke="#c49635" stroke-width="2"/>
-              <text x="155" y="130" fill="#faecc4" font-family="Cinzel, serif" font-weight="900" font-size="10" text-anchor="middle">1924</text>
-              <line x1="40" y1="45" x2="155" y2="45" stroke="#7a1f1f" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 3"/>
-              <line x1="40" y1="60" x2="145" y2="60" stroke="#6e4848" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="40" y1="75" x2="150" y2="75" stroke="#6e4848" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="40" y1="90" x2="130" y2="90" stroke="#6e4848" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="40" y1="105" x2="120" y2="105" stroke="#6e4848" stroke-width="1.8" stroke-linecap="round"/>
-              <rect x="50" y="26" width="90" height="12" rx="3" fill="#7a1f1f" fill-opacity="0.15"/>
-              <text x="95" y="35" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="8" text-anchor="middle">HISTORICAL SURVEY</text>
-            </g>
-
-            <!-- Quill & Ink -->
-            <g transform="translate(295, 105)">
-              <path d="M 15 35 L 35 35 L 40 55 L 10 55 Z" fill="#521212" stroke="#c49635" stroke-width="2"/>
-              <rect x="20" y="28" width="10" height="7" fill="#c49635"/>
-              <path d="M 25 30 Q 55 -20 80 -60 Q 60 -10 23 25" fill="#faecc4" stroke="#7a1f1f" stroke-width="1.5"/>
-              <path d="M 25 30 Q 45 -10 65 -45" stroke="#c49635" stroke-width="1.5"/>
-            </g>
-          </svg>
+          <img src="/images/rice-purity-test-history-1924-campus.jpg" alt="1920s university campus illustration for the history of the Rice Purity Test" width="1200" height="514" loading="lazy" decoding="async">
         </div>
         <div class="blog-card-body">
           <div class="blog-card-date">HISTORY & ORIGINS</div>
-          <h2 class="blog-card-title">The History of Self-Reflection Tests</h2>
+          <h2 class="blog-card-title">The History of the Rice Purity Test</h2>
           <p class="blog-card-excerpt">
             Discover the fascinating history of how a 100-question paper survey created in a 1920s college dorm evolved into a worldwide digital tradition.
           </p>
-          <a href="history-of-the-test.html" class="btn-read-more">Read Article &rarr;</a>
+          <a href="/blog/history-of-the-test.html" class="btn-read-more">Read Article &rarr;</a>
         </div>
       </article>
 
       <!-- Article 3 Card -->
       <article class="blog-card">
         <div class="blog-card-image">
-          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="FAQ Speech Bubbles Illustration">
-            <rect width="400" height="200" fill="#7a1f1f"/>
-            <path d="M 400 0 L 0 200 L 400 200 Z" fill="#9e2b2b" opacity="0.4"/>
-            
-            <!-- Sunburst Rays -->
-            <g opacity="0.1" stroke="#faecc4" stroke-width="1.5">
-              <line x1="200" y1="100" x2="50" y2="20"/>
-              <line x1="200" y1="100" x2="350" y2="20"/>
-              <line x1="200" y1="100" x2="380" y2="100"/>
-              <line x1="200" y1="100" x2="20" y2="100"/>
-              <line x1="200" y1="100" x2="80" y2="180"/>
-              <line x1="200" y1="100" x2="320" y2="180"/>
-            </g>
-
-            <!-- Secondary Answer Speech Bubble -->
-            <g transform="translate(55, 45)">
-              <path d="M 20 0 L 150 0 C 161 0 170 9 170 20 L 170 80 C 170 91 161 100 150 100 L 60 100 L 30 125 L 35 100 L 20 100 C 9 100 0 91 0 80 L 0 20 C 0 9 9 0 20 0 Z" fill="#521212" stroke="#c49635" stroke-width="2.5"/>
-              <circle cx="45" cy="50" r="18" fill="#c49635"/>
-              <path d="M 37 50 L 43 56 L 54 43" stroke="#521212" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="75" y1="40" x2="145" y2="40" stroke="#faecc4" stroke-width="3" stroke-linecap="round"/>
-              <line x1="75" y1="52" x2="135" y2="52" stroke="#faecc4" opacity="0.8" stroke-width="2.5" stroke-linecap="round"/>
-              <line x1="75" y1="64" x2="125" y2="64" stroke="#faecc4" opacity="0.6" stroke-width="2.5" stroke-linecap="round"/>
-            </g>
-
-            <!-- Primary Question Speech Bubble -->
-            <g transform="translate(170, 25)">
-              <path d="M 20 0 L 150 0 C 161 0 170 9 170 20 L 170 90 C 170 101 161 110 150 110 L 125 110 L 135 138 L 95 110 L 20 110 C 9 110 0 101 0 90 L 0 20 C 0 9 9 0 20 0 Z" fill="#faecc4" stroke="#7a1f1f" stroke-width="3"/>
-              <text x="85" y="78" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="900" font-size="62" text-anchor="middle">?</text>
-            </g>
-
-            <!-- FAQ Badge & Q Icon -->
-            <g transform="translate(40, 22)">
-              <rect x="0" y="0" width="40" height="22" rx="11" fill="#c49635" stroke="#faecc4" stroke-width="1.5"/>
-              <text x="20" y="15" fill="#521212" font-family="Cinzel, serif" font-weight="800" font-size="10" text-anchor="middle">FAQ</text>
-            </g>
-
-            <g transform="translate(325, 135)">
-              <circle cx="15" cy="15" r="14" fill="#faecc4" stroke="#7a1f1f" stroke-width="2"/>
-              <text x="15" y="20" fill="#7a1f1f" font-family="Cinzel, serif" font-weight="800" font-size="13" text-anchor="middle">Q</text>
-            </g>
-          </svg>
+          <img src="/images/rice-purity-test-faq-questions.jpg" alt="Parchment page with question marks illustration for Rice Purity Test frequently asked questions" width="1200" height="800" loading="lazy" decoding="async">
         </div>
         <div class="blog-card-body">
           <div class="blog-card-date">FAQ & HELP</div>
@@ -635,11 +564,53 @@
           <p class="blog-card-excerpt">
             Got questions about how scoring works, privacy safety, or edition differences? Read our definitive answers to the most common user queries.
           </p>
-          <a href="faq.html" class="btn-read-more">Read Article &rarr;</a>
+          <a href="/blog/faq.html" class="btn-read-more">Read Article &rarr;</a>
         </div>
       </article>
 
+      <!-- Guide Card (added in fixed build) -->
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Cake illustration">
+            <rect width="400" height="200" fill="#381313"/>
+            <circle cx="200" cy="100" r="72" stroke="#c49635" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="200" y="122" font-size="64" text-anchor="middle">🎂</text>
+          </svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date">GUIDE • 2026 EDITION</div>
+          <h2 class="blog-card-title">Average Rice Purity Score by Age</h2>
+          <p class="blog-card-excerpt">How does your score compare with people your age? See the typical ranges from the teens to 40+, why scores fall fastest during college, and why they level off later in life.</p>
+          <a href="/average-rice-purity-score-by-age/" class="btn-read-more">Read Full Article &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Guide Card (added in fixed build) -->
+      <article class="blog-card">
+        <div class="blog-card-image">
+          <svg viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Target illustration">
+            <rect width="400" height="200" fill="#381313"/>
+            <circle cx="200" cy="100" r="72" stroke="#c49635" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 6"/>
+            <text x="200" y="122" font-size="64" text-anchor="middle">🎯</text>
+          </svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-date">GUIDE • 2026 EDITION</div>
+          <h2 class="blog-card-title">What Is a Good Rice Purity Score?</h2>
+          <p class="blog-card-excerpt">The honest answer to the question everyone asks after the test. Why there is no pass mark, which ranges people usually feel comfortable with, and when a score is worth a second thought.</p>
+          <a href="/what-is-a-good-rice-purity-score/" class="btn-read-more">Read Full Article &rarr;</a>
+        </div>
+      </article>
+
+
     </div>
+    <div style="background: rgba(122,31,31,0.06); border: 1.5px dashed var(--maroon); border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
+      <h2 style="font-family: 'Cinzel', serif; color: var(--maroon); font-size: 1.35rem; margin-bottom: 10px;">Start With the Test, Then Come Back and Read Your Score Properly</h2>
+      <p style="margin-bottom: 10px;">Here's the order we'd recommend, and it's the order most readers end up following anyway. First, <a href="/" style="color: var(--maroon); font-weight: 700;">take the Rice Purity Test</a> — a few minutes, 100 questions, no sign-up, and your answers never leave your device. Enjoy the number for a moment. Then, when the questions start — is that normal? is that good? what do people my age usually get? — that's what this blog is for.</p>
+      <p style="margin-bottom: 10px;">Work through it in whatever order your curiosity takes you. The <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">score meaning chart</a> decodes your exact range. The <a href="/average-rice-purity-score-by-age/" style="color: var(--maroon); font-weight: 700;">average score by age</a> guide puts your result next to the ranges people your age typically report, with the honest caveats those numbers deserve. Our answer to <a href="/what-is-a-good-rice-purity-score/" style="color: var(--maroon); font-weight: 700;">what a good score actually is</a> might be the most reassuring thing you read today. And if the mechanics are what's bugging you — how the counting works, whether your answers are saved, what the five editions are for — the <a href="/blog/faq.html" style="color: var(--maroon); font-weight: 700;">FAQ page</a> settles those in about two minutes.</p>
+      <p>New guides land here when readers ask us something we can't answer in a paragraph. If there's a question about the test you wish existed as a full article, <a href="/contact-us/" style="color: var(--maroon); font-weight: 700;">tell us</a> — that's genuinely how most of these pages started.</p>
+    </div>
+
   </div>
 
   <!-- Expanded Footer -->
@@ -655,12 +626,12 @@
       </div>
 
       <ul class="footer-links">
-        <li><a href="../index.html">Rice Purity Test</a></li>
-        <li><a href="index.html" class="active">Blogs</a></li>
-        <li><a href="../about-us/index.html">About Us</a></li>
-        <li><a href="../contact-us/index.html">Contact Us</a></li>
-        <li><a href="../privacy-policy/index.html">Privacy Policy</a></li>
-        <li><a href="../terms-and-conditions/index.html">Terms and Conditions</a></li>
+        <li><a href="/">Rice Purity Test</a></li>
+        <li><a href="/blog/" class="active">Blogs</a></li>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/contact-us/">Contact Us</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
       </ul>
 
       <div class="footer-divider"></div>

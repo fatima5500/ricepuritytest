@@ -459,7 +459,7 @@ window.i18nDict_ru = {
   "Cycled a distance of over 30 miles in one day": "Проехал на велосипеде более 30 миль за один день",
   "Spent a day in complete silence as a personal challenge": "Провел день в полном молчании в качестве личного вызова",
   "Helped a neighbour with a task without being asked": "Помог соседу без его просьбы",
-  "Answered every question on this Clean & Safe Edition honestly!": "Честно ответил на все вопросы в Чистой и безопасной версии!"
+  "Answered every question on this Clean & Safe Edition honestly!": "Честно ответил на все вопросы в Чистой и безопасной версии!",
   
   // Couples Edition (100 Questions)
   "Had a secret crush on someone for over 6 months": "Был тайно влюблен в кого-то больше 6 месяцев",

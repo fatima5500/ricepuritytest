@@ -1,8 +1,20 @@
-ErrorDocument 404 /404.html
-
+# ricepurityscores.com — canonical host + HTTPS (Hostinger / Apache / LiteSpeed)
 RewriteEngine On
-RewriteRule ^blog/score-meaning-guide\.html$ /blog/rice-purity-test-score-meaning/ [R=301,L]
 
-<FilesMatch "^(test_browser\.py|test\.js)$">
-  Require all denied
-</FilesMatch>
+# 301: www -> non-www, and http -> https (single hop to the canonical URL)
+RewriteCond %{HTTP_HOST} ^www\.ricepurityscores\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://ricepurityscores.com/$1 [L,R=301]
+
+# 301: remove the duplicate project-folder copy of the homepage
+RewriteRule ^ricepurityscores-main/?$ / [L,R=301]
+RewriteRule ^ricepurityscores-main/(.*)$ /$1 [L,R=301]
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'self'"
+</IfModule>
