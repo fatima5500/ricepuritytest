@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/ricepurityscores-main", "destination": "/", "permanent": true },
+    { "source": "/ricepurityscores-main/:path*", "destination": "/", "permanent": true }
+  ]
+}
