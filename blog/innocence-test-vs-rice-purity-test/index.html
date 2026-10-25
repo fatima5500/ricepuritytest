@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innocence Test vs Rice Purity Test: Same Test or Different?</title>
+  <meta name="description" content="Is the innocence test the same as the Rice Purity Test? See where the two names match, where versions differ, and what your innocence score means.">
+
+  <link rel="canonical" href="https://ricepurityscores.com/blog/innocence-test-vs-rice-purity-test/">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-cream: #faecc4;
+      --bg-cream-card: #fdfaf2;
+      --bg-cream-hover: #f5e4b3;
+      --maroon: #7a1f1f;
+      --maroon-dark: #521212;
+      --maroon-light: #9e2b2b;
+      --maroon-soft: rgba(122, 31, 31, 0.12);
+      --text-dark: #381313;
+      --text-muted: #6e4848;
+      --border-maroon: #7a1f1f;
+      --gold-accent: #c49635;
+      
+      --shadow-sm: 0 4px 12px rgba(122, 31, 31, 0.08);
+      --shadow-md: 0 10px 28px rgba(122, 31, 31, 0.12);
+      --shadow-lg: 0 20px 50px rgba(122, 31, 31, 0.25);
+    }
+
+    body.dark-mode {
+      --bg-cream: #140d0d;
+      --bg-cream-card: #201414;
+      --bg-cream-hover: #2e1c1c;
+      --maroon: #e56b6b;
+      --maroon-dark: #f88383;
+      --maroon-light: #fca5a5;
+      --maroon-soft: rgba(229, 107, 107, 0.18);
+      --text-dark: #fce8e8;
+      --text-muted: #d4a8a8;
+      --border-maroon: #9e3636;
+      --gold-accent: #f0c05a;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      background-image: 
+        radial-gradient(rgba(122, 31, 31, 0.14) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(250, 236, 196, 0.82), rgba(250, 236, 196, 0.96));
+      background-size: 24px 24px, 100% 100%;
+      background-attachment: fixed;
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-image: 
+        radial-gradient(rgba(229, 107, 107, 0.1) 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(20, 13, 13, 0.92), rgba(20, 13, 13, 0.98));
+    }
+
+    /* Navigation Bar */
+    .site-nav {
+      background-color: var(--bg-cream-card);
+      border-bottom: 2px solid var(--border-maroon);
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 500;
+      box-shadow: var(--shadow-sm);
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-container {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--maroon);
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-right-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--maroon);
+    }
+
+    /* Dark/Light Mode Switcher Button */
+    .theme-toggle-btn {
+      appearance: none;
+      background-color: var(--bg-cream);
+      border: 1.5px solid var(--maroon);
+      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--maroon);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle-btn:hover {
+      background-color: var(--bg-cream-hover);
+      transform: scale(1.06);
+    }
+
+    .lang-switcher {
+      position: relative;
+    }
+
+    .lang-select {
+      appearance: none;
+      background-color: var(--bg-cream);
+      border: 1.5px solid var(--maroon);
+      border-radius: 8px;
+      padding: 6px 28px 6px 12px;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--maroon);
+      cursor: pointer;
+    }
+
+    .lang-switcher::after {
+      content: '▼';
+      font-size: 0.65rem;
+      color: var(--maroon);
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--maroon);
+      cursor: pointer;
+    }
+
+    /* Article Container (Widened to 1000px) */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 16px 70px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--maroon);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      margin-bottom: 24px;
+      transition: transform 0.2s ease;
+    }
+
+    .back-link:hover {
+      transform: translateX(-4px);
+    }
+
+    .article-card {
+      background-color: var(--bg-cream-card);
+      border: 2px solid var(--border-maroon);
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: var(--shadow-md);
+      transition: background-color 0.3s ease;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .category-badge {
+      background-color: var(--maroon-soft);
+      color: var(--maroon);
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .article-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--maroon);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .article-lead {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 28px;
+      border-left: 4px solid var(--maroon);
+      padding-left: 16px;
+    }
+
+    .article-card h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.35rem;
+      color: var(--maroon);
+      margin: 32px 0 14px;
+      border-bottom: 2px solid rgba(122, 31, 31, 0.18);
+      padding-bottom: 6px;
+    }
+
+    .article-card p {
+      font-size: 1.04rem;
+      color: var(--text-dark);
+      margin-bottom: 18px;
+    }
+
+    .timeline-box {
+      background-color: var(--bg-cream);
+      border: 1.5px solid var(--border-maroon);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+
+    .timeline-item {
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 24px;
+      border-left: 2px solid var(--maroon);
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-year {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      color: var(--maroon);
+      font-size: 1.05rem;
+    }
+
+    .callout-box {
+      background-color: var(--bg-cream);
+      border: 2px dashed var(--maroon);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 28px 0;
+      text-align: center;
+    }
+
+    .callout-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      color: var(--maroon);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
+      color: #ffffff;
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      padding: 12px 28px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 14px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Expanded Footer */
+    .site-footer {
+      background-color: var(--bg-cream-card);
+      border-top: 2px solid var(--border-maroon);
+      padding: 50px 20px 40px;
+      text-align: center;
+      margin-top: 60px;
+      transition: background-color 0.3s ease;
+    }
+
+    .footer-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand-line {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--maroon);
+      letter-spacing: 1px;
+    }
+
+    .footer-tagline {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    .footer-links-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--maroon);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px 32px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--maroon);
+    }
+
+    .footer-divider {
+      width: 100%;
+      max-width: 650px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border-maroon), transparent);
+      opacity: 0.35;
+      margin: 8px 0 4px;
+    }
+
+    .footer-copyright {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-cream-card);
+        border-bottom: 2px solid var(--maroon);
+        flex-direction: column;
+        padding: 18px;
+        gap: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .article-card {
+        padding: 24px 18px;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 14px;
+      }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="Innocence Test vs Rice Purity Test: Same Test or Different?">
+  <meta property="og:description" content="Is the innocence test the same as the Rice Purity Test? See where the two names match, where versions differ, and what your innocence score means.">
+  <meta property="og:url" content="https://ricepurityscores.com/blog/innocence-test-vs-rice-purity-test/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rice Purity Scores">
+  <meta property="og:image" content="https://ricepurityscores.com/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Innocence Test vs Rice Purity Test: Same Test or Different?">
+  <meta name="twitter:description" content="Is the innocence test the same as the Rice Purity Test? See where the two names match, where versions differ, and what your innocence score means.">
+  <meta name="twitter:image" content="https://ricepurityscores.com/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://ricepurityscores.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://ricepurityscores.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Innocence Test vs Rice Purity Test: Same Test or Different?",
+      "item": "https://ricepurityscores.com/blog/innocence-test-vs-rice-purity-test/"
+    }
+  ]
+}
+  </script>
+  <style>
+    .article-figure { margin: 30px 0; background: #fdfaf2; border: 2px solid #7a1f1f; border-radius: 16px; padding: 12px; box-shadow: 0 10px 28px rgba(122, 31, 31, 0.12); }
+    .article-figure img { width: 100%; height: auto; display: block; border-radius: 10px; }
+    .article-figure figcaption { text-align: center; font-size: 0.92rem; font-style: italic; color: #6e4848; padding: 10px 8px 2px; line-height: 1.5; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the innocence test the same as the Rice Purity Test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, yes. Most sites use \"innocence test\" as a friendlier name for the same 100-question Rice Purity Test, scored down from 100. Check the question count and scoring direction before comparing scores across sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an innocence score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An innocence score is the same number as a rice purity score: 100 minus the number of experiences you ticked on the list. A higher score means fewer listed experiences apply to you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an official innocence test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no official publisher of either test. The list is a student tradition from Rice University, and every site hosting it today is an independent version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my friend and I have different scores on different sites?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because versions differ. Different question counts, reworded questions, or reversed scoring all change the result. Compare scores only when both of you took the same version."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which version should I trust?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The classic 100-question version scored down from 100 is the one most people compare. Take it honestly, and treat any \"official\" label in a site's title as marketing, not certification."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">
+        <span>📜 Rice Purity Test</span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
+
+      <div class="nav-right-group">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/blog/" class="active">Blog</a></li>
+          <li><a href="/contact-us/">Contact Us</a></li>
+        </ul>
+
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
+
+        <div class="lang-switcher">
+          <select class="lang-select" id="langSelect" aria-label="Select Language">
+            <option value="en">🌐 English</option>
+            <option value="es">🌐 Español</option>
+            <option value="fr">🌐 Français</option>
+            <option value="de">🌐 Deutsch</option>
+            <option value="pt">🌐 Português</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Article Content -->
+  <main class="container">
+    <a href="/blog/" class="back-link">&larr; Back to Blog Listing</a>
+
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="category-badge">GUIDES & COMPARISONS</span>
+        <span>• 7 MIN READ • 2026 EDITION</span>
+      </div>
+
+      <h1 class="article-title">Innocence Test vs Rice Purity Test: Are They the Same Thing?</h1>
+
+      <p class="article-lead">
+        If you searched for an innocence test and ended up reading about the Rice Purity Test, you are not lost. Most of the time, the two names point at the same list of 100 questions and the same score. But not always — and the differences matter when you compare your number with someone else's. Here is the honest breakdown.
+      </p>
+
+      <p>Start with the simple version. The Rice Purity Test is a 100-item checklist of life experiences. You tick the ones you have had, and your score is 100 minus the number of ticks. A score of 100 means you ticked nothing. A score of 0 means you ticked everything. The list runs from mild stuff, like holding hands, to things most people never do. That is the whole machine, and it has worked the same way since the list settled into its 100-question form.</p>
+
+      <p>Now type "innocence test" into a search engine and you will mostly find the same machine wearing a different name. Same 100 questions, same scoring, same result. So why do two names exist at all?</p>
+
+      <h2>The Short Answer: Usually, Yes — Same Test</h2>
+      <p>In the common case, an innocence test <em>is</em> the Rice Purity Test. Sites use the softer name for a few plain reasons. "Purity" sounds moralistic to some people, and a site that wants a friendly front door would rather say "innocence". A generic name also avoids suggesting any link to a university. The test began at <a href="https://www.rice.edu" style="color: var(--maroon); font-weight: 700;">Rice University</a>, as our <a href="/blog/history-of-the-test.html" style="color: var(--maroon); font-weight: 700;">history of the test</a> explains, but the sites hosting it today have no connection to Rice. Calling it an innocence test sidesteps that confusion entirely.</p>
+      <p>So if a site calls its quiz an innocence test, gives you 100 questions, and scores you down from 100, you took the Rice Purity Test. Your innocence score and your rice purity score are the same number with a different label on top.</p>
+
+      <figure class="article-figure">
+        <img src="/images/innocence-test-vs-rice-purity-test-cards.jpg" alt="Two vintage paper score cards side by side, one labelled in spirit as an innocence test and the other as the Rice Purity Test" width="1000" height="560" loading="lazy" decoding="async">
+        <figcaption>Two names, one list. When the questions and the scoring match, the score means the same thing whatever the title says.</figcaption>
+      </figure>
+
+      <h2>Where the Two Can Differ</h2>
+      <p>Here is where it gets less tidy. Because nobody owns this test — there has never been a single official publisher — anyone can host a version of it, and versions drift. Three differences show up most often:</p>
+      <p><strong>Question count.</strong> The classic list has 100 questions. Some innocence tests trim it to 50, or stretch it, or swap questions in and out. A score out of 50 is not comparable to a score out of 100, even though both call themselves a purity or innocence score.</p>
+      <p><strong>Wording.</strong> The original list was written by students decades ago, and some of its wording shows its age. Modern hosts reword questions, soften some, and occasionally replace a few outright. Two people can therefore answer "the same" test and have faced slightly different questions.</p>
+      <p><strong>Scoring direction.</strong> This is the sneaky one. Almost every version scores down from 100: more ticks, lower score. But a few themed variants score the other way, where a higher number means more experience. If you compare scores across sites without checking the direction, you can end up exactly backwards.</p>
+      <p>None of this makes one version "fake" and another "real". It just means the name on the door is not a guarantee. Before you compare your score with a friend's, check three things: how many questions, whether the scoring runs down from 100, and whether the questions look like the classic list. If all three match, the comparison is fair.</p>
+
+      <h2>What Your Innocence Score Actually Means</h2>
+      <p>Exactly what a rice purity score means — nothing more, nothing less. It counts how many items on one particular list apply to you. It does not measure character, kindness, maturity, or future choices. Our <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">score meaning guide</a> walks through every range, and the same ranges apply whatever the test is called: high 90s means very few items ticked, the middle of the scale is where most adults land, and the low end means most of the list applies to you.</p>
+      <p>There is no official scale, by the way. No university, publisher, or research body certifies what a 72 "means". Every scale you see online — including ours — is a reading of the list, built by looking at which items sit where. Treat any site that claims an official scale with suspicion. And if you want to know how your number compares with people your age, our <a href="/average-rice-purity-score-by-age/" style="color: var(--maroon); font-weight: 700;">average score by age</a> page gives the usual self-reported ranges, with the honest caveat that no official dataset exists.</p>
+
+      <figure class="article-figure">
+        <img src="/images/innocence-test-vs-rice-purity-test-students.jpg" alt="University students laughing while comparing their test scores together" width="1000" height="560" loading="lazy" decoding="async">
+        <figcaption>The comparison is the point. Friends rarely argue about the name on the test — they argue about the number.</figcaption>
+      </figure>
+
+      <h2>Is There an "Official" Innocence Test?</h2>
+      <p>No. There is no official innocence test, just as there is no official rice purity test publisher. The list began as a student tradition, spread on paper, and then spread online, and every site hosting it today is an independent version. Some sites use the word "official" in their titles as marketing. It does not mean Rice University endorses them, and it does not mean their version is more accurate than anyone else's.</p>
+      <p>The practical upshot is simple: pick a version you trust, take it honestly, and compare scores only with people who took the same version. The name matters far less than the questions behind it.</p>
+
+      <h2>Which One Should You Take?</h2>
+      <p>If you want the classic experience, take the 100-question version scored down from 100 — that is the one your friends are almost certainly comparing. You can <a href="/" style="color: var(--maroon); font-weight: 700;">take the Rice Purity Test here</a> in any of our five editions, and your answers never leave your own device. If a site's innocence test looks shorter, reworded, or scored backwards, there is nothing wrong with taking it for fun — just do not stack its number against a classic score and wonder why they disagree.</p>
+      <p>And if you still have questions about how the number works, our <a href="/blog/faq.html" style="color: var(--maroon); font-weight: 700;">frequently asked questions</a> page covers scoring, privacy, retakes, and what a "good" score even means. The short version of all of it: the test is a game with a number attached. The name on the box is the least important part.</p>
+
+      <h2>Frequently Asked Questions</h2>
+      <h3>Is the innocence test the same as the Rice Purity Test?</h3>
+      <p>Usually, yes. Most sites use "innocence test" as a friendlier name for the same 100-question Rice Purity Test, scored down from 100. Check the question count and scoring direction before comparing scores across sites.</p>
+      <h3>What is an innocence score?</h3>
+      <p>An innocence score is the same number as a rice purity score: 100 minus the number of experiences you ticked on the list. A higher score means fewer listed experiences apply to you.</p>
+      <h3>Is there an official innocence test?</h3>
+      <p>No. There is no official publisher of either test. The list is a student tradition from Rice University, and every site hosting it today is an independent version.</p>
+      <h3>Why do my friend and I have different scores on different sites?</h3>
+      <p>Because versions differ. Different question counts, reworded questions, or reversed scoring all change the result. Compare scores only when both of you took the same version.</p>
+      <h3>Which version should I trust?</h3>
+      <p>The classic 100-question version scored down from 100 is the one most people compare. Take it honestly, and treat any "official" label in a site's title as marketing, not certification.</p>
+
+      <div class="callout-box">
+        <div class="callout-title">Take the Classic Version</div>
+        <p>Same list, same scoring, no account, no saved answers. See where you land on the version everyone is actually comparing.</p>
+        <a href="/" class="btn-cta">Start The Test &rarr;</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Expanded Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <div class="footer-brand-line">📜 Rice Purity Test</div>
+        <div class="footer-tagline">The Ultimate Self-Reflection Life Experience Quiz</div>
+      </div>
+
+      <div>
+        <div class="footer-links-title">Important Links</div>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="/">Rice Purity Test</a></li>
+        <li><a href="/blog/" class="active">Blogs</a></li>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/contact-us/">Contact Us</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+      </ul>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../lang-switcher.js"></script>
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.body.classList.add('dark-mode');
+        if (themeToggleBtn) themeToggleBtn.textContent = '☀️';
+      } else {
+        document.body.classList.remove('dark-mode');
+        if (themeToggleBtn) themeToggleBtn.textContent = '🌙';
+      }
+    }
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
+      });
+    }
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    initTheme();
+  </script>
+</body>
+</html>
