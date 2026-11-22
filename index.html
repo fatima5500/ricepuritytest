@@ -228,7 +228,108 @@
     .btn-facebook { background: #1877f2; color: #ffffff; border-color: #0d5cb6; }
 
     /* Result panel (inline, hub style) */
-    .result-panel { text-align: center; margin: 10px 0 30px; padding: 26px 16px; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+    /* Result box (modal) — opens in front of the user on Calculate, as before */
+    .result-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(20, 18, 12, 0.6);
+      z-index: 1000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 24px 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .result-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .confetti-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .confetti-particle {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @keyframes particleFall {
+      0% {
+        transform: translateY(-20px) rotate(0deg) scale(0.8);
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg) scale(1);
+        opacity: 0;
+      }
+    }
+
+    .result-modal {
+      background: var(--card);
+      border: 3px solid var(--ink);
+      border-radius: 12px;
+      width: min(580px, calc(100vw - 32px));
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 36px 24px 28px;
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      transform: scale(0.9) translateY(24px);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      z-index: 2;
+      margin: auto;
+    }
+
+    .result-overlay.active .result-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .result-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: var(--card);
+      border: 2px solid var(--ink);
+      font-size: 1.4rem;
+      color: var(--ink);
+      cursor: pointer;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, background 0.2s ease;
+      z-index: 3;
+    }
+
+    .result-close-btn:hover {
+      transform: scale(1.12);
+      background: var(--mint);
+    }
     .result-title { font-size: 1.3rem; font-weight: 700; }
     .score-number { font-size: 5rem; font-weight: 700; color: var(--red); line-height: 1.1; }
     .score-out-of { color: var(--muted); margin-bottom: 8px; }
@@ -383,28 +484,32 @@
     <p class="intro">Rice Purity Test is a free 100-question self-assessment quiz from Rice Purity Scores. Tick every experience that applies to you and get your instant score from 0 to 100 — no sign-up, and your answers stay in your own browser. It is made for friends, couples and college students who want a fun way to compare experiences, start conversations, or retake it over time and see how their score changes.</p>
     <h2 class="quiz-heading">Take the Rice Purity Test (100 Questions)</h2>
 
-    <!-- Result panel (hidden until Calculate; hub style) -->
-    <section class="result-panel" id="resultPanel" hidden aria-live="polite">
-      <h2 class="result-title">Your Rice Purity Score is:</h2>
-      <div class="score-number" id="finalScore">0</div>
-      <div class="score-out-of">out of 100</div>
-      <div class="tier-badge" id="tierBadge">PURE SAINT</div>
-      <p class="tier-description" id="tierDescription"></p>
-      <div class="result-actions">
-        <button class="btn btn-mint" id="testAgainBtn">Try Again</button>
-      </div>
-      <h3 class="share-heading">Share your result:</h3>
-      <div class="score-card-preview"><img id="scoreCardPreview" alt="Your Rice Purity Test score card"></div>
-      <div class="share-buttons">
-        <button class="btn btn-gold" id="shareImageBtn">Share Image</button>
-        <button class="btn btn-black" id="downloadCardBtn">Download Image</button>
-        <button class="btn btn-whatsapp" id="shareWhatsappBtn">WhatsApp</button>
-        <button class="btn btn-black" id="shareTwitterBtn">Post on X</button>
-        <button class="btn btn-facebook" id="shareFacebookBtn">Facebook</button>
-        <button class="btn btn-mint" id="copyCaptionBtn">Copy Caption</button>
-      </div>
-      <textarea class="caption-box" id="captionBox" rows="3" readonly></textarea>
-    </section>
+    <!-- Result box (hidden until Calculate; opens as a pop-up box, as before) -->
+    <div class="result-overlay" id="resultOverlay" aria-hidden="true">
+      <div class="confetti-container" id="confettiContainer"></div>
+      <section class="result-modal" id="resultPanel" role="dialog" aria-live="polite" tabindex="-1">
+        <button class="result-close-btn" id="closeResultBtn" aria-label="Close result">&times;</button>
+        <h2 class="result-title">Your Rice Purity Score is:</h2>
+        <div class="score-number" id="finalScore">0</div>
+        <div class="score-out-of">out of 100</div>
+        <div class="tier-badge" id="tierBadge">PURE SAINT</div>
+        <p class="tier-description" id="tierDescription"></p>
+        <div class="result-actions">
+          <button class="btn btn-mint" id="testAgainBtn">Try Again</button>
+        </div>
+        <h3 class="share-heading">Share your result:</h3>
+        <div class="score-card-preview"><img id="scoreCardPreview" alt="Your Rice Purity Test score card"></div>
+        <div class="share-buttons">
+          <button class="btn btn-gold" id="shareImageBtn">Share Image</button>
+          <button class="btn btn-black" id="downloadCardBtn">Download Image</button>
+          <button class="btn btn-whatsapp" id="shareWhatsappBtn">WhatsApp</button>
+          <button class="btn btn-black" id="shareTwitterBtn">Post on X</button>
+          <button class="btn btn-facebook" id="shareFacebookBtn">Facebook</button>
+          <button class="btn btn-mint" id="copyCaptionBtn">Copy Caption</button>
+        </div>
+        <textarea class="caption-box" id="captionBox" rows="3" readonly></textarea>
+      </section>
+    </div>
 
     <!-- 5 Edition Tabs Bar -->
     <nav class="edition-tabs">
@@ -1970,6 +2075,9 @@
     const clearBtnBottom = document.getElementById('clearBtnBottom');
 
     const resultPanel = document.getElementById('resultPanel');
+    const resultOverlay = document.getElementById('resultOverlay');
+    const closeResultBtn = document.getElementById('closeResultBtn');
+    const confettiContainer = document.getElementById('confettiContainer');
     const finalScoreEl = document.getElementById('finalScore');
     const tierBadgeEl = document.getElementById('tierBadge');
     const tierDescriptionEl = document.getElementById('tierDescription');
@@ -2247,6 +2355,49 @@
       requestAnimationFrame(step);
     }
 
+    function triggerConfetti() {
+      confettiContainer.innerHTML = '';
+      const colors = ['#c9a227', '#101c33', '#cdeacb', '#f7f1d3', '#d92626', '#1a1a1a'];
+
+      for (let i = 0; i < 40; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'confetti-particle';
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const left = Math.random() * 100;
+        const delay = Math.random() * 0.35;
+        const duration = 1.2 + Math.random() * 1.2;
+        const size = 6 + Math.random() * 8;
+        const isCircle = Math.random() > 0.4;
+
+        particle.style.cssText = `
+          left: ${left}%;
+          top: -12px;
+          width: ${size}px;
+          height: ${size}px;
+          background-color: ${color};
+          border-radius: ${isCircle ? '50%' : '2px'};
+          animation: particleFall ${duration}s ease-out ${delay}s forwards;
+        `;
+        confettiContainer.appendChild(particle);
+      }
+    }
+
+    function openResultModal() {
+      resultOverlay.classList.remove('active');
+      void resultOverlay.offsetWidth;
+      resultOverlay.classList.add('active');
+      resultOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      triggerConfetti();
+      resultPanel.focus();
+    }
+
+    function closeResultModal() {
+      resultOverlay.classList.remove('active');
+      resultOverlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
     function calculateScore() {
       const checkboxes = document.querySelectorAll('#checklistContainer input[type="checkbox"]');
       let checkedCount = 0;
@@ -2277,10 +2428,9 @@
       const cardCanvas = renderScoreCardCanvas(score);
       scoreCardPreview.src = cardCanvas.toDataURL('image/png');
 
-      // Show the inline result panel at the top of the page
-      resultPanel.hidden = false;
+      // Show the result box (pop-up modal) in front of the user, as before
+      openResultModal();
       animateScoreCountUp(score);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function clearAllCheckboxes(confirmPrompt = true) {
@@ -2300,7 +2450,7 @@
 
     function handleTestAgain() {
       clearAllCheckboxes(false);
-      resultPanel.hidden = true;
+      closeResultModal();
       window.scrollTo({ top: 0, behavior: 'smooth' });
       showToast('Checklist reset! Ready for a new test.');
     }
@@ -2615,6 +2765,13 @@
     shareFacebookBtn.addEventListener('click', shareFacebook);
     copyCaptionBtn.addEventListener('click', copyCaption);
     testAgainBtn.addEventListener('click', handleTestAgain);
+    closeResultBtn.addEventListener('click', closeResultModal);
+    resultOverlay.addEventListener('click', (e) => {
+      if (e.target === resultOverlay) closeResultModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && resultOverlay.classList.contains('active')) closeResultModal();
+    });
 
     document.addEventListener('DOMContentLoaded', () => {
       initTheme();
