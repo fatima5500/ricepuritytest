@@ -181,12 +181,13 @@
 
     /* Logo banner (hub style) */
     .logo-banner { text-align: center; padding: 28px 0 6px; position: relative; }
-    .logo-illustration { position: absolute; top: 18px; right: 0; width: 90px; opacity: 0.9; }
+    .logo-illustration { position: absolute; top: 10px; right: calc(50% - 300px); width: 90px; opacity: 0.9; }
     .logo-illustration svg { width: 100%; height: auto; }
     .logo-script { font-family: Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 700; font-size: 1.5rem; color: #c0392b; transform: rotate(-2deg); }
     .logo-rules { margin: 2px auto 6px; width: 260px; }
     .logo-rules span { display: block; height: 2px; background: var(--ink); margin: 5px 0; }
     .logo-name { font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 2.3rem; color: var(--ink); letter-spacing: 0.5px; }
+    @media (max-width: 760px) { .logo-illustration { display: none; } }
 
     h1.title { font-family: Georgia, 'Times New Roman', serif; font-size: 1.65rem; font-weight: 700; color: var(--ink); text-align: center; margin: 18px 0 12px; line-height: 1.3; }
     .intro { text-align: center; color: var(--ink); font-size: 1.02rem; max-width: 640px; margin: 0 auto 26px; }
@@ -2256,7 +2257,7 @@
 
       // Fill the caption box and render the score-card preview (hub style)
       captionBox.value = captionText(score);
-      const cardCanvas = renderScoreCardCanvas();
+      const cardCanvas = renderScoreCardCanvas(score);
       scoreCardPreview.src = cardCanvas.toDataURL('image/png');
 
       // Show the inline result panel at the top of the page
@@ -2288,7 +2289,7 @@
     }
 
     // Score card rendered on canvas (hub style: dark navy card, gold text/border)
-    function renderScoreCardCanvas() {
+    function renderScoreCardCanvas(score) {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       canvas.width = 600;
@@ -2337,9 +2338,10 @@
       ctx.font = 'bold 13px serif';
       ctx.fillText('MY SCORE', 300, 178);
 
-      const score = finalScoreEl.textContent;
+      // Use the passed score; fall back to the displayed number when called later (download/share)
+      const s = (score === undefined) ? finalScoreEl.textContent : score;
       ctx.font = 'bold 62px serif';
-      ctx.fillText(score, 300, 232);
+      ctx.fillText(s, 300, 232);
 
       ctx.font = '16px serif';
       ctx.fillText('/ 100', 300, 258);
