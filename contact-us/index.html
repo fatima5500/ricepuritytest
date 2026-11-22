@@ -8,41 +8,38 @@
 
   <link rel="canonical" href="https://www.ricepurityscores.com/contact-us/">
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-cream: #faecc4;
-      --bg-cream-card: #fdfaf2;
-      --bg-cream-hover: #f5e4b3;
-      --maroon: #7a1f1f;
-      --maroon-dark: #521212;
-      --maroon-light: #9e2b2b;
-      --maroon-soft: rgba(122, 31, 31, 0.12);
-      --text-dark: #381313;
-      --text-muted: #6e4848;
-      --border-maroon: #7a1f1f;
+      --bg-cream: #f7f1d3;
+      --bg-cream-card: #fffdf4;
+      --bg-cream-hover: #efe6bd;
+      --maroon: #1a1a1a;
+      --maroon-dark: #000000;
+      --maroon-light: #333333;
+      --maroon-soft: rgba(0, 0, 0, 0.12);
+      --text-dark: #1a1a1a;
+      --text-muted: #4d4d4d;
+      --border-maroon: #1a1a1a;
       --gold-accent: #c49635;
       
-      --shadow-sm: 0 4px 12px rgba(122, 31, 31, 0.08);
-      --shadow-md: 0 10px 28px rgba(122, 31, 31, 0.12);
-      --shadow-lg: 0 20px 50px rgba(122, 31, 31, 0.25);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.25);
     }
 
     body.dark-mode {
-      --bg-cream: #140d0d;
-      --bg-cream-card: #201414;
-      --bg-cream-hover: #2e1c1c;
-      --maroon: #e56b6b;
-      --maroon-dark: #f88383;
-      --maroon-light: #fca5a5;
-      --maroon-soft: rgba(229, 107, 107, 0.18);
-      --text-dark: #fce8e8;
-      --text-muted: #d4a8a8;
-      --border-maroon: #9e3636;
-      --gold-accent: #f0c05a;
+      --bg-cream: #1c1a16;
+      --bg-cream-card: #262219;
+      --bg-cream-hover: #2e2a1e;
+      --maroon: #f0ead2;
+      --maroon-dark: #fff8e0;
+      --maroon-light: #d9cfa8;
+      --maroon-soft: rgba(240, 234, 210, 0.18);
+      --text-dark: #f0ead2;
+      --text-muted: #c9c2a4;
+      --border-maroon: #8a8474;
+      --gold-accent: #d9b45a;
 
       --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
       --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.5);
@@ -57,22 +54,18 @@
 
     body {
       background-color: var(--bg-cream);
-      background-image: 
-        radial-gradient(rgba(122, 31, 31, 0.14) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(250, 236, 196, 0.82), rgba(250, 236, 196, 0.96));
+      background-image: none;
       background-size: 24px 24px, 100% 100%;
       background-attachment: fixed;
       color: var(--text-dark);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.7;
       min-height: 100vh;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     body.dark-mode {
-      background-image: 
-        radial-gradient(rgba(229, 107, 107, 0.1) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(20, 13, 13, 0.92), rgba(20, 13, 13, 0.98));
+      background-image: none;
     }
 
     .site-nav {
@@ -101,7 +94,7 @@
       gap: 10px;
       text-decoration: none;
       color: var(--maroon);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 1.25rem;
       letter-spacing: 1px;
@@ -123,7 +116,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -166,7 +159,7 @@
       border: 1.5px solid var(--maroon);
       border-radius: 8px;
       padding: 6px 28px 6px 12px;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.85rem;
       color: var(--maroon);
@@ -209,7 +202,7 @@
     }
 
     .page-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: clamp(2rem, 4.5vw, 3rem);
       color: var(--maroon);
       text-transform: uppercase;
@@ -219,11 +212,11 @@
     }
 
     .contact-card h2 {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.4rem;
       color: var(--maroon);
       margin: 32px 0 14px;
-      border-bottom: 2px solid rgba(122, 31, 31, 0.2);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       padding-bottom: 6px;
     }
 
@@ -248,7 +241,7 @@
     }
 
     .form-group label {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       color: var(--maroon);
@@ -268,7 +261,7 @@
 
     .form-group input:focus, .form-group textarea:focus {
       border-color: var(--maroon-light);
-      box-shadow: 0 0 0 3px rgba(122, 31, 31, 0.15);
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
     }
 
     .btn-submit {
@@ -277,7 +270,7 @@
       border: 2px solid var(--maroon);
       padding: 14px 28px;
       border-radius: 10px;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 1rem;
       cursor: pointer;
@@ -312,7 +305,7 @@
     }
 
     .footer-brand-line {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.2rem;
       font-weight: 800;
       color: var(--maroon);
@@ -327,7 +320,7 @@
     }
 
     .footer-links-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 0.98rem;
       font-weight: 800;
       color: var(--maroon);
@@ -347,7 +340,7 @@
     .footer-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -500,29 +493,20 @@
   ]
 }
   </script>
+  <style>
+    /* Hub-style plain chrome: utility row (theme + language) */
+    .utility-row { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 12px 20px 0; }
+    .utility-row .theme-toggle-btn { background: transparent; border: 1px solid #8a8a8a; border-radius: 6px; font-size: 1rem; padding: 4px 10px; cursor: pointer; }
+    .utility-row .lang-select { font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; border: 1px solid #8a8a8a; border-radius: 6px; padding: 5px 8px; }
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="/" class="nav-brand">
-        <span>📜 Rice Purity Test</span>
-      </a>
-
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
-
-      <div class="nav-right-group">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contact-us/" class="active">Contact Us</a></li>
-        </ul>
-
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
-
-        <div class="lang-switcher">
+  <!-- Plain utility row: theme + language (kept working, restyled plainly) -->
+  <div class="utility-row">
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
+    <div class="lang-switcher">
           <select class="lang-select" id="langSelect" aria-label="Select Language">
             <option value="en">🌐 English</option>
             <option value="es">🌐 Español</option>
@@ -531,9 +515,7 @@
             <option value="pt">🌐 Português</option>
           </select>
         </div>
-      </div>
-    </div>
-  </nav>
+  </div>
 
   <!-- Contact Us Content -->
   <main class="container">
@@ -541,7 +523,7 @@
       <h1 class="page-title">Contact Us</h1>
 
       <h2>Getting in Touch</h2>
-      <p>The fastest way to reach us is email. Write to us at <a href="mailto:admin@ricepurityscores.com" style="color: var(--maroon); font-weight: 700;">admin@ricepurityscores.com</a>, or use the form below — the form doesn't send anything by itself; when you press the button it opens your own email app with your message already addressed and written out, ready for you to send. Either way, your message lands in the same inbox.</p>
+      <p>The fastest way to reach us is email. Write to us at <a href="mailto:admin@ricepurityscores.com">admin@ricepurityscores.com</a>, or use the form below — the form doesn't send anything by itself; when you press the button it opens your own email app with your message already addressed and written out, ready for you to send. Either way, your message lands in the same inbox.</p>
       <p>We do read what comes in. Corrections and bug reports in particular are genuinely useful — a site like this stays accurate because readers point at the things we've missed. What we won't do is promise you a reply time. This is a small site run alongside everything else in life, and while most messages do get an answer, it can take a while, and a question that's already covered in our guides may get a shorter reply pointing you to the page that answers it.</p>
 
       <h2>Before You Write — Three Quick Answers</h2>
@@ -549,7 +531,7 @@
       <ul style="margin-left: 24px; margin-bottom: 16px;">
         <li><strong>"Can you look up my score?"</strong> We can't — and that's by design, not by policy. Your answers are counted inside your own browser and never reach us, so there is no record of your result anywhere for us to find. If you closed the tab, the score went with it.</li>
         <li><strong>"Can a question be changed or removed?"</strong> Possibly, and it's worth writing in. The Standard edition follows the traditional 100-question list, so we don't rewrite that lightly, but wording problems, broken translations and genuine mistakes do get fixed — tell us which question, in which edition, and what looks wrong.</li>
-        <li><strong>"Can I use your questions or guides on my own site or video?"</strong> Ask first, please. Short quotes with a link back are usually fine; copying a full question list or guide wholesale is not. The details are in our <a href="/terms-and-conditions/" style="color: var(--maroon); font-weight: 700;">Terms and Conditions</a>.</li>
+        <li><strong>"Can I use your questions or guides on my own site or video?"</strong> Ask first, please. Short quotes with a link back are usually fine; copying a full question list or guide wholesale is not. The details are in our <a href="/terms-and-conditions/">Terms and Conditions</a>.</li>
       </ul>
 
       <h2>What People Usually Write About</h2>
@@ -558,7 +540,7 @@
         <li><strong>Question suggestions.</strong> The themed editions grow and change over time, and ideas for new questions — or better wording for old ones — are welcome.</li>
         <li><strong>Something broken.</strong> If a page looks wrong on your phone or the score button does nothing, tell us which device and browser you were using. That detail turns a mystery into a fixable bug.</li>
         <li><strong>Business and media.</strong> Partnerships, advertising, licensing or press questions can all go to the same inbox — put "Business" in the subject line so it stands out.</li>
-        <li><strong>Privacy questions.</strong> If anything in our <a href="/privacy-policy/" style="color: var(--maroon); font-weight: 700;">Privacy Policy</a> is unclear, ask us directly and we'll explain it in plain words.</li>
+        <li><strong>Privacy questions.</strong> If anything in our <a href="/privacy-policy/">Privacy Policy</a> is unclear, ask us directly and we'll explain it in plain words.</li>
       </ul>
 
       <h2>Send a Message</h2>
@@ -589,7 +571,7 @@
       </form>
 
       <h2>A Note on What Not to Send</h2>
-      <p>Please don't email us your test answers or a screenshot of your result list expecting us to interpret it personally — your score is yours, and our <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">score meaning guide</a> will walk you through it better than we could in an email. And if you're a student with a question about your actual university — housing, orientation week, campus rules — we're the wrong inbox entirely; we run a quiz website, and we're not affiliated with Rice University or any other school.</p>
+      <p>Please don't email us your test answers or a screenshot of your result list expecting us to interpret it personally — your score is yours, and our <a href="/blog/rice-purity-test-score-meaning/">score meaning guide</a> will walk you through it better than we could in an email. And if you're a student with a question about your actual university — housing, orientation week, campus rules — we're the wrong inbox entirely; we run a quiz website, and we're not affiliated with Rice University or any other school.</p>
     </article>
   </main>
 
@@ -597,30 +579,17 @@
 
   <!-- Expanded Footer -->
   <footer class="site-footer">
-    <div class="footer-container">
-      <div>
-        <div class="footer-brand-line">📜 Rice Purity Test</div>
-        <div class="footer-tagline">The Ultimate Self-Reflection Life Experience Quiz</div>
-      </div>
-
-      <div>
-        <div class="footer-links-title">Important Links</div>
-      </div>
-
-      <ul class="footer-links">
-        <li><a href="/">Rice Purity Test</a></li>
-        <li><a href="/blog/">Blogs</a></li>
-        <li><a href="/about-us/">About Us</a></li>
-        <li><a href="/contact-us/">Contact Us</a></li>
-        <li><a href="/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
-      </ul>
-
-      <div class="footer-divider"></div>
-
-      <div class="footer-copyright">
-        &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
-      </div>
+    <ul class="footer-links">
+      <li><a href="/">Rice Purity Test</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about-us/">About Us</a></li>
+      <li><a href="/contact-us/">Contact Us</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+      <li><a href="/#disclaimer">Disclaimer</a></li>
+    </ul>
+    <div class="footer-copyright">
+      &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
     </div>
   </footer>
 
@@ -645,9 +614,6 @@
         themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
       });
     }
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('active');
-    });
 
     const contactForm = document.getElementById('contactForm');
     const toast = document.getElementById('toast');

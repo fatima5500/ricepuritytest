@@ -8,41 +8,38 @@
 
   <link rel="canonical" href="https://www.ricepurityscores.com/blog/innocence-test-vs-rice-purity-test/">
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-cream: #faecc4;
-      --bg-cream-card: #fdfaf2;
-      --bg-cream-hover: #f5e4b3;
-      --maroon: #7a1f1f;
-      --maroon-dark: #521212;
-      --maroon-light: #9e2b2b;
-      --maroon-soft: rgba(122, 31, 31, 0.12);
-      --text-dark: #381313;
-      --text-muted: #6e4848;
-      --border-maroon: #7a1f1f;
+      --bg-cream: #f7f1d3;
+      --bg-cream-card: #fffdf4;
+      --bg-cream-hover: #efe6bd;
+      --maroon: #1a1a1a;
+      --maroon-dark: #000000;
+      --maroon-light: #333333;
+      --maroon-soft: rgba(0, 0, 0, 0.12);
+      --text-dark: #1a1a1a;
+      --text-muted: #4d4d4d;
+      --border-maroon: #1a1a1a;
       --gold-accent: #c49635;
       
-      --shadow-sm: 0 4px 12px rgba(122, 31, 31, 0.08);
-      --shadow-md: 0 10px 28px rgba(122, 31, 31, 0.12);
-      --shadow-lg: 0 20px 50px rgba(122, 31, 31, 0.25);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.25);
     }
 
     body.dark-mode {
-      --bg-cream: #140d0d;
-      --bg-cream-card: #201414;
-      --bg-cream-hover: #2e1c1c;
-      --maroon: #e56b6b;
-      --maroon-dark: #f88383;
-      --maroon-light: #fca5a5;
-      --maroon-soft: rgba(229, 107, 107, 0.18);
-      --text-dark: #fce8e8;
-      --text-muted: #d4a8a8;
-      --border-maroon: #9e3636;
-      --gold-accent: #f0c05a;
+      --bg-cream: #1c1a16;
+      --bg-cream-card: #262219;
+      --bg-cream-hover: #2e2a1e;
+      --maroon: #f0ead2;
+      --maroon-dark: #fff8e0;
+      --maroon-light: #d9cfa8;
+      --maroon-soft: rgba(240, 234, 210, 0.18);
+      --text-dark: #f0ead2;
+      --text-muted: #c9c2a4;
+      --border-maroon: #8a8474;
+      --gold-accent: #d9b45a;
 
       --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
       --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.5);
@@ -57,22 +54,18 @@
 
     body {
       background-color: var(--bg-cream);
-      background-image: 
-        radial-gradient(rgba(122, 31, 31, 0.14) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(250, 236, 196, 0.82), rgba(250, 236, 196, 0.96));
+      background-image: none;
       background-size: 24px 24px, 100% 100%;
       background-attachment: fixed;
       color: var(--text-dark);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.7;
       min-height: 100vh;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     body.dark-mode {
-      background-image: 
-        radial-gradient(rgba(229, 107, 107, 0.1) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(20, 13, 13, 0.92), rgba(20, 13, 13, 0.98));
+      background-image: none;
     }
 
     /* Navigation Bar */
@@ -102,7 +95,7 @@
       gap: 10px;
       text-decoration: none;
       color: var(--maroon);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 1.25rem;
       letter-spacing: 1px;
@@ -124,7 +117,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -167,7 +160,7 @@
       border: 1.5px solid var(--maroon);
       border-radius: 8px;
       padding: 6px 28px 6px 12px;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.85rem;
       color: var(--maroon);
@@ -206,7 +199,7 @@
       align-items: center;
       gap: 8px;
       color: var(--maroon);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.95rem;
       text-decoration: none;
@@ -240,7 +233,7 @@
     .category-badge {
       background-color: var(--maroon-soft);
       color: var(--maroon);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       padding: 4px 12px;
       border-radius: 20px;
@@ -249,7 +242,7 @@
     }
 
     .article-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: clamp(1.8rem, 4vw, 2.6rem);
       color: var(--maroon);
       line-height: 1.3;
@@ -266,11 +259,11 @@
     }
 
     .article-card h2 {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.35rem;
       color: var(--maroon);
       margin: 32px 0 14px;
-      border-bottom: 2px solid rgba(122, 31, 31, 0.18);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.18);
       padding-bottom: 6px;
     }
 
@@ -300,7 +293,7 @@
     }
 
     .timeline-year {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       color: var(--maroon);
       font-size: 1.05rem;
@@ -316,7 +309,7 @@
     }
 
     .callout-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       color: var(--maroon);
       font-size: 1.2rem;
@@ -327,7 +320,7 @@
       display: inline-block;
       background: linear-gradient(135deg, var(--maroon), var(--maroon-dark));
       color: #ffffff;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       padding: 12px 28px;
       border-radius: 25px;
@@ -362,7 +355,7 @@
     }
 
     .footer-brand-line {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.2rem;
       font-weight: 800;
       color: var(--maroon);
@@ -377,7 +370,7 @@
     }
 
     .footer-links-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 0.98rem;
       font-weight: 800;
       color: var(--maroon);
@@ -397,7 +390,7 @@
     .footer-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -488,9 +481,9 @@
 }
   </script>
   <style>
-    .article-figure { margin: 30px 0; background: #fdfaf2; border: 2px solid #7a1f1f; border-radius: 16px; padding: 12px; box-shadow: 0 10px 28px rgba(122, 31, 31, 0.12); }
+    .article-figure { margin: 30px 0; background: #fffdf4; border: 2px solid #1a1a1a; border-radius: 16px; padding: 12px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12); }
     .article-figure img { width: 100%; height: auto; display: block; border-radius: 10px; }
-    .article-figure figcaption { text-align: center; font-size: 0.92rem; font-style: italic; color: #6e4848; padding: 10px 8px 2px; line-height: 1.5; }
+    .article-figure figcaption { text-align: center; font-size: 0.92rem; font-style: italic; color: #4d4d4d; padding: 10px 8px 2px; line-height: 1.5; }
   </style>
   <script type="application/ld+json">
 {
@@ -597,29 +590,20 @@
   ]
 }
   </script>
+  <style>
+    /* Hub-style plain chrome: utility row (theme + language) */
+    .utility-row { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 12px 20px 0; }
+    .utility-row .theme-toggle-btn { background: transparent; border: 1px solid #8a8a8a; border-radius: 6px; font-size: 1rem; padding: 4px 10px; cursor: pointer; }
+    .utility-row .lang-select { font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; border: 1px solid #8a8a8a; border-radius: 6px; padding: 5px 8px; }
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="/" class="nav-brand">
-        <span>📜 Rice Purity Test</span>
-      </a>
-
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
-
-      <div class="nav-right-group">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/blog/" class="active">Blog</a></li>
-          <li><a href="/contact-us/">Contact Us</a></li>
-        </ul>
-
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
-
-        <div class="lang-switcher">
+  <!-- Plain utility row: theme + language (kept working, restyled plainly) -->
+  <div class="utility-row">
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
+    <div class="lang-switcher">
           <select class="lang-select" id="langSelect" aria-label="Select Language">
             <option value="en">🌐 English</option>
             <option value="es">🌐 Español</option>
@@ -628,9 +612,7 @@
             <option value="pt">🌐 Português</option>
           </select>
         </div>
-      </div>
-    </div>
-  </nav>
+  </div>
 
   <!-- Main Article Content -->
   <main class="container">
@@ -653,7 +635,7 @@
       <p>Now type "innocence test" into a search engine and you will mostly find the same machine wearing a different name. Same 100 questions, same scoring, same result. So why do two names exist at all?</p>
 
       <h2>The Short Answer: Usually, Yes — Same Test</h2>
-      <p>In the common case, an innocence test <em>is</em> the Rice Purity Test. Sites use the softer name for a few plain reasons. "Purity" sounds moralistic to some people, and a site that wants a friendly front door would rather say "innocence". A generic name also avoids suggesting any link to a university. The test began at <a href="https://www.rice.edu" style="color: var(--maroon); font-weight: 700;">Rice University</a>, as our <a href="/blog/history-of-the-test.html" style="color: var(--maroon); font-weight: 700;">history of the test</a> explains, but the sites hosting it today have no connection to Rice. Calling it an innocence test sidesteps that confusion entirely.</p>
+      <p>In the common case, an innocence test <em>is</em> the Rice Purity Test. Sites use the softer name for a few plain reasons. "Purity" sounds moralistic to some people, and a site that wants a friendly front door would rather say "innocence". A generic name also avoids suggesting any link to a university. The test began at <a href="https://www.rice.edu">Rice University</a>, as our <a href="/blog/history-of-the-test.html">history of the test</a> explains, but the sites hosting it today have no connection to Rice. Calling it an innocence test sidesteps that confusion entirely.</p>
       <p>So if a site calls its quiz an innocence test, gives you 100 questions, and scores you down from 100, you took the Rice Purity Test. Your innocence score and your rice purity score are the same number with a different label on top.</p>
 
       <figure class="article-figure">
@@ -669,8 +651,8 @@
       <p>None of this makes one version "fake" and another "real". It just means the name on the door is not a guarantee. Before you compare your score with a friend's, check three things: how many questions, whether the scoring runs down from 100, and whether the questions look like the classic list. If all three match, the comparison is fair.</p>
 
       <h2>What Your Innocence Score Actually Means</h2>
-      <p>Exactly what a rice purity score means — nothing more, nothing less. It counts how many items on one particular list apply to you. It does not measure character, kindness, maturity, or future choices. Our <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">score meaning guide</a> walks through every range, and the same ranges apply whatever the test is called: high 90s means very few items ticked, the middle of the scale is where most adults land, and the low end means most of the list applies to you.</p>
-      <p>There is no official scale, by the way. No university, publisher, or research body certifies what a 72 "means". Every scale you see online — including ours — is a reading of the list, built by looking at which items sit where. Treat any site that claims an official scale with suspicion. And if you want to know how your number compares with people your age, our <a href="/average-rice-purity-score-by-age/" style="color: var(--maroon); font-weight: 700;">average score by age</a> page gives the usual self-reported ranges, with the honest caveat that no official dataset exists.</p>
+      <p>Exactly what a rice purity score means — nothing more, nothing less. It counts how many items on one particular list apply to you. It does not measure character, kindness, maturity, or future choices. Our <a href="/blog/rice-purity-test-score-meaning/">score meaning guide</a> walks through every range, and the same ranges apply whatever the test is called: high 90s means very few items ticked, the middle of the scale is where most adults land, and the low end means most of the list applies to you.</p>
+      <p>There is no official scale, by the way. No university, publisher, or research body certifies what a 72 "means". Every scale you see online — including ours — is a reading of the list, built by looking at which items sit where. Treat any site that claims an official scale with suspicion. And if you want to know how your number compares with people your age, our <a href="/average-rice-purity-score-by-age/">average score by age</a> page gives the usual self-reported ranges, with the honest caveat that no official dataset exists.</p>
 
       <figure class="article-figure">
         <img src="/images/innocence-test-vs-rice-purity-test-students.jpg" alt="University students laughing while comparing their test scores together" width="1000" height="560" loading="lazy" decoding="async">
@@ -682,8 +664,8 @@
       <p>The practical upshot is simple: pick a version you trust, take it honestly, and compare scores only with people who took the same version. The name matters far less than the questions behind it.</p>
 
       <h2>Which One Should You Take?</h2>
-      <p>If you want the classic experience, take the 100-question version scored down from 100 — that is the one your friends are almost certainly comparing. You can <a href="/" style="color: var(--maroon); font-weight: 700;">take the Rice Purity Test here</a> in any of our five editions, and your answers never leave your own device. If a site's innocence test looks shorter, reworded, or scored backwards, there is nothing wrong with taking it for fun — just do not stack its number against a classic score and wonder why they disagree.</p>
-      <p>And if you still have questions about how the number works, our <a href="/blog/faq.html" style="color: var(--maroon); font-weight: 700;">frequently asked questions</a> page covers scoring, privacy, retakes, and what a "good" score even means. The short version of all of it: the test is a game with a number attached. The name on the box is the least important part.</p>
+      <p>If you want the classic experience, take the 100-question version scored down from 100 — that is the one your friends are almost certainly comparing. You can <a href="/">take the Rice Purity Test here</a> in any of our five editions, and your answers never leave your own device. If a site's innocence test looks shorter, reworded, or scored backwards, there is nothing wrong with taking it for fun — just do not stack its number against a classic score and wonder why they disagree.</p>
+      <p>And if you still have questions about how the number works, our <a href="/blog/faq.html">frequently asked questions</a> page covers scoring, privacy, retakes, and what a "good" score even means. The short version of all of it: the test is a game with a number attached. The name on the box is the least important part.</p>
 
       <h2>Frequently Asked Questions</h2>
       <h3>Is the innocence test the same as the Rice Purity Test?</h3>
@@ -698,9 +680,9 @@
       <p>The classic 100-question version scored down from 100 is the one most people compare. Take it honestly, and treat any "official" label in a site's title as marketing, not certification.</p>
 
       
-      <div style="background: rgba(122,31,31,0.06); border: 1.5px dashed #7A1F1F; border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
+      <div style="background: rgba(0,0,0,0.06); border: 1.5px dashed #1a1a1a; border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
         <h2>Keep Reading</h2>
-        <p><a href="/blog/rice-purity-test-questions-explained/" style="color: #7A1F1F; font-weight: 700;">Rice Purity Test questions explained</a> — every category in plain language; <a href="/blog/rice-purity-test-tiktok-viral/" style="color: #7A1F1F; font-weight: 700;">Why the test went viral on TikTok</a> — the story behind the trend; <a href="/blog/rice-purity-test-terms-explained/" style="color: #7A1F1F; font-weight: 700;">Rice Purity Test terms explained</a> — MPS, streaking and more.</p>
+        <p><a href="/blog/rice-purity-test-questions-explained/" style="color: #1a1a1a; font-weight: 700;">Rice Purity Test questions explained</a> — every category in plain language; <a href="/blog/rice-purity-test-tiktok-viral/" style="color: #1a1a1a; font-weight: 700;">Why the test went viral on TikTok</a> — the story behind the trend; <a href="/blog/rice-purity-test-terms-explained/" style="color: #1a1a1a; font-weight: 700;">Rice Purity Test terms explained</a> — MPS, streaking and more.</p>
       </div>
 <div class="callout-box">
         <div class="callout-title">Take the Classic Version</div>
@@ -713,30 +695,17 @@
 
   <!-- Expanded Footer -->
   <footer class="site-footer">
-    <div class="footer-container">
-      <div>
-        <div class="footer-brand-line">📜 Rice Purity Test</div>
-        <div class="footer-tagline">The Ultimate Self-Reflection Life Experience Quiz</div>
-      </div>
-
-      <div>
-        <div class="footer-links-title">Important Links</div>
-      </div>
-
-      <ul class="footer-links">
-        <li><a href="/">Rice Purity Test</a></li>
-        <li><a href="/blog/" class="active">Blogs</a></li>
-        <li><a href="/about-us/">About Us</a></li>
-        <li><a href="/contact-us/">Contact Us</a></li>
-        <li><a href="/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
-      </ul>
-
-      <div class="footer-divider"></div>
-
-      <div class="footer-copyright">
-        &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
-      </div>
+    <ul class="footer-links">
+      <li><a href="/">Rice Purity Test</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about-us/">About Us</a></li>
+      <li><a href="/contact-us/">Contact Us</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+      <li><a href="/#disclaimer">Disclaimer</a></li>
+    </ul>
+    <div class="footer-copyright">
+      &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
     </div>
   </footer>
 
@@ -761,9 +730,6 @@
         themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
       });
     }
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('active');
-    });
 
     initTheme();
   </script>

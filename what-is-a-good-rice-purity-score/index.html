@@ -84,40 +84,37 @@
 }
   </script>
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-cream: #faecc4;
-      --bg-cream-card: #fdfaf2;
-      --bg-cream-hover: #f5e4b3;
-      --maroon: #7a1f1f;
-      --maroon-dark: #521212;
-      --maroon-light: #9e2b2b;
-      --maroon-soft: rgba(122, 31, 31, 0.12);
-      --text-dark: #381313;
-      --text-muted: #6e4848;
-      --border-maroon: #7a1f1f;
+      --bg-cream: #f7f1d3;
+      --bg-cream-card: #fffdf4;
+      --bg-cream-hover: #efe6bd;
+      --maroon: #1a1a1a;
+      --maroon-dark: #000000;
+      --maroon-light: #333333;
+      --maroon-soft: rgba(0, 0, 0, 0.12);
+      --text-dark: #1a1a1a;
+      --text-muted: #4d4d4d;
+      --border-maroon: #1a1a1a;
       --gold-accent: #c49635;
       
-      --shadow-sm: 0 4px 12px rgba(122, 31, 31, 0.08);
-      --shadow-md: 0 10px 28px rgba(122, 31, 31, 0.12);
-      --shadow-lg: 0 20px 50px rgba(122, 31, 31, 0.25);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.12);
+      --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.25);
     }
 
     body.dark-mode {
-      --bg-cream: #140d0d;
-      --bg-cream-card: #201414;
-      --bg-cream-hover: #2e1c1c;
-      --maroon: #e56b6b;
-      --maroon-dark: #f88383;
-      --maroon-light: #fca5a5;
-      --maroon-soft: rgba(229, 107, 107, 0.18);
-      --text-dark: #fce8e8;
-      --text-muted: #d4a8a8;
-      --border-maroon: #9e3636;
-      --gold-accent: #f0c05a;
+      --bg-cream: #1c1a16;
+      --bg-cream-card: #262219;
+      --bg-cream-hover: #2e2a1e;
+      --maroon: #f0ead2;
+      --maroon-dark: #fff8e0;
+      --maroon-light: #d9cfa8;
+      --maroon-soft: rgba(240, 234, 210, 0.18);
+      --text-dark: #f0ead2;
+      --text-muted: #c9c2a4;
+      --border-maroon: #8a8474;
+      --gold-accent: #d9b45a;
 
       --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
       --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.5);
@@ -132,22 +129,18 @@
 
     body {
       background-color: var(--bg-cream);
-      background-image: 
-        radial-gradient(rgba(122, 31, 31, 0.14) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(250, 236, 196, 0.82), rgba(250, 236, 196, 0.96));
+      background-image: none;
       background-size: 24px 24px, 100% 100%;
       background-attachment: fixed;
       color: var(--text-dark);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.7;
       min-height: 100vh;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     body.dark-mode {
-      background-image: 
-        radial-gradient(rgba(229, 107, 107, 0.1) 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(20, 13, 13, 0.92), rgba(20, 13, 13, 0.98));
+      background-image: none;
     }
 
     /* Navigation Bar */
@@ -177,7 +170,7 @@
       gap: 10px;
       text-decoration: none;
       color: var(--maroon);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 800;
       font-size: 1.25rem;
       letter-spacing: 1px;
@@ -199,7 +192,7 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -242,7 +235,7 @@
       border: 1.5px solid var(--maroon);
       border-radius: 8px;
       padding: 6px 28px 6px 12px;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.85rem;
       color: var(--maroon);
@@ -286,7 +279,7 @@
     }
 
     .article-meta {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 0.88rem;
       font-weight: 700;
       color: var(--gold-accent);
@@ -296,7 +289,7 @@
     }
 
     .article-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: clamp(1.9rem, 4.5vw, 2.8rem);
       color: var(--maroon);
       margin-bottom: 24px;
@@ -304,11 +297,11 @@
     }
 
     .article-card h2 {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.45rem;
       color: var(--maroon);
       margin: 32px 0 14px;
-      border-bottom: 2px solid rgba(122, 31, 31, 0.2);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
       padding-bottom: 6px;
     }
 
@@ -332,24 +325,24 @@
     .chart-table th, .chart-table td {
       padding: 12px 16px;
       text-align: left;
-      border-bottom: 1px solid rgba(122, 31, 31, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     }
 
     .chart-table th {
       background-color: var(--maroon);
       color: #ffffff;
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.95rem;
     }
 
     .chart-table tr:nth-child(even) {
-      background-color: rgba(122, 31, 31, 0.04);
+      background-color: rgba(0, 0, 0, 0.04);
     }
 
     /* FAQ Box */
     .faq-item {
-      background-color: rgba(122, 31, 31, 0.05);
+      background-color: rgba(0, 0, 0, 0.05);
       border-left: 4px solid var(--maroon);
       padding: 16px 20px;
       border-radius: 8px;
@@ -357,7 +350,7 @@
     }
 
     .faq-question {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 1.05rem;
       color: var(--maroon);
@@ -389,7 +382,7 @@
     }
 
     .footer-brand-line {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 1.2rem;
       font-weight: 800;
       color: var(--maroon);
@@ -404,7 +397,7 @@
     }
 
     .footer-links-title {
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 0.98rem;
       font-weight: 800;
       color: var(--maroon);
@@ -424,7 +417,7 @@
     .footer-links a {
       text-decoration: none;
       color: var(--text-dark);
-      font-family: 'Cinzel', serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 700;
       font-size: 0.92rem;
       transition: color 0.2s ease;
@@ -478,9 +471,9 @@
     }
   
     .score-table { width: 100%; border-collapse: collapse; margin: 18px 0 22px; font-size: 0.97rem; }
-    .score-table th { background: var(--maroon); color: #fff; font-family: 'Cinzel', serif; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; }
-    .score-table td { padding: 10px 12px; border-bottom: 1px solid rgba(122,31,31,0.18); vertical-align: top; }
-    .score-table tr:nth-child(even) td { background: rgba(122,31,31,0.05); }
+    .score-table th { background: var(--maroon); color: #fff; font-family: Georgia, 'Times New Roman', serif; letter-spacing: 0.5px; padding: 10px 12px; text-align: left; }
+    .score-table td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.18); vertical-align: top; }
+    .score-table tr:nth-child(even) td { background: rgba(0,0,0,0.05); }
   
       .article-container img { max-width: 100%; height: auto; }
     </style>
@@ -535,29 +528,20 @@
   ]
 }
   </script>
+  <style>
+    /* Hub-style plain chrome: utility row (theme + language) */
+    .utility-row { display: flex; justify-content: flex-end; align-items: center; gap: 10px; padding: 12px 20px 0; }
+    .utility-row .theme-toggle-btn { background: transparent; border: 1px solid #8a8a8a; border-radius: 6px; font-size: 1rem; padding: 4px 10px; cursor: pointer; }
+    .utility-row .lang-select { font-family: Georgia, 'Times New Roman', serif; font-size: 0.9rem; border: 1px solid #8a8a8a; border-radius: 6px; padding: 5px 8px; }
+  </style>
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <a href="/" class="nav-brand">
-        <span>📜 Rice Purity Test</span>
-      </a>
-
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">☰</button>
-
-      <div class="nav-right-group">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about-us/">About Us</a></li>
-          <li><a href="/" class="active">Blog</a></li>
-          <li><a href="/contact-us/">Contact Us</a></li>
-        </ul>
-
-        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
-
-        <div class="lang-switcher">
+  <!-- Plain utility row: theme + language (kept working, restyled plainly) -->
+  <div class="utility-row">
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark or light mode">🌙</button>
+    <div class="lang-switcher">
           <select class="lang-select" id="langSelect" aria-label="Select Language">
             <option value="en">🌐 English</option>
             <option value="es">🌐 Español</option>
@@ -566,12 +550,10 @@
             <option value="pt">🌐 Português</option>
           </select>
         </div>
-      </div>
-    </div>
-  </nav>
+  </div>
 
   <main class="article-container">
-    <a href="/blog/" class="back-link" style="display: inline-flex; align-items: center; gap: 8px; color: var(--maroon); font-family: 'Cinzel', serif; font-weight: 700; font-size: 0.95rem; text-decoration: none; margin-bottom: 20px;">&larr; Back to Blog Listing</a>
+    <a href="/blog/" class="back-link" style="display: inline-flex; align-items: center; gap: 8px; color: var(--maroon); font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 0.95rem; text-decoration: none; margin-bottom: 20px;">&larr; Back to Blog Listing</a>
     <article class="article-card">
       <div class="article-meta">SCORE GUIDE • 2026 EDITION</div>
       <h1 class="article-title">What Is a Good Rice Purity Score? The Honest Answer</h1>
@@ -582,7 +564,7 @@
               <img src="/images/rice-purity-good-score-gauge.jpg" alt="Illustration of a thoughtful young person looking up at a large ornate vintage gauge dial" width="1200" height="800" loading="lazy" decoding="async">
 <h2>The Honest Answer: There Is No Good or Bad Score</h2>
       <p>
-        The <a href="/" style="color: var(--maroon); font-weight: 700;">Rice Purity Test</a> does not grade you. It counts. Every box you tick is an experience from a list written by university students in the last century, and the final number simply reports how many of those experiences you have collected. A high score means few of them apply to you yet. A low score means many of them do. Neither says anything about your honesty, kindness, intelligence or future — the qualities that actually make a life good are nowhere on the list, mostly because they would make a very boring quiz.
+        The <a href="/">Rice Purity Test</a> does not grade you. It counts. Every box you tick is an experience from a list written by university students in the last century, and the final number simply reports how many of those experiences you have collected. A high score means few of them apply to you yet. A low score means many of them do. Neither says anything about your honesty, kindness, intelligence or future — the qualities that actually make a life good are nowhere on the list, mostly because they would make a very boring quiz.
       </p>
         <img src="/images/rice-purity-good-score-balance.jpg" alt="Illustration of a balanced brass scale symbolizing that no Rice Purity Score is good or bad" width="1200" height="800" loading="lazy" decoding="async">
       <p>
@@ -601,7 +583,7 @@
         </tbody>
       </table>
       <p>
-        If you forced most students to pick one band and label it "good", they would probably point at the 70s and 80s — enough experience to have stories, not so much that the number becomes the story. But notice how much that answer depends on the audience. The exact same score of 48 can look worldly in a first-year dorm and positively tame at a thirty-year-old's dinner party. Context is everything, which is why our <a href="/average-rice-purity-score-by-age/" style="color: var(--maroon); font-weight: 700;">average score by age</a> guide is worth reading alongside this one.
+        If you forced most students to pick one band and label it "good", they would probably point at the 70s and 80s — enough experience to have stories, not so much that the number becomes the story. But notice how much that answer depends on the audience. The exact same score of 48 can look worldly in a first-year dorm and positively tame at a thirty-year-old's dinner party. Context is everything, which is why our <a href="/average-rice-purity-score-by-age/">average score by age</a> guide is worth reading alongside this one.
       </p>
       <h2>When a Score Is Worth a Second Thought</h2>
       <p>
@@ -609,7 +591,7 @@
       </p>
       <h2>How to Actually Use Your Score</h2>
       <p>
-        The best use of a Rice Purity Score is the use it was invented for a hundred years ago: starting conversations. Compare editions with a partner using the Couples Edition and you will hear stories no direct question would ever produce. Retake the Standard test once a year and watch which sections move — the category breakdown in your result shows exactly where your new experiences came from. And if your number is very different from a friend's, treat it as an invitation to swap stories rather than a ranking, because that is all it has ever been. For the complete interpretation of every range, see the full <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">Rice Purity Test score meaning</a> chart.
+        The best use of a Rice Purity Score is the use it was invented for a hundred years ago: starting conversations. Compare editions with a partner using the Couples Edition and you will hear stories no direct question would ever produce. Retake the Standard test once a year and watch which sections move — the category breakdown in your result shows exactly where your new experiences came from. And if your number is very different from a friend's, treat it as an invitation to swap stories rather than a ranking, because that is all it has ever been. For the complete interpretation of every range, see the full <a href="/blog/rice-purity-test-score-meaning/">Rice Purity Test score meaning</a> chart.
       </p>
 
       <h2>Scores, Confidence and the Comparison Trap</h2>
@@ -636,39 +618,26 @@
         <div class="faq-question">Can my Rice Purity Score go back up?</div>
         <div class="faq-answer">No. The score counts experiences you have had, and experiences cannot be un-had, so on the same edition of the test your score can only stay the same or go down over time. That is exactly why friends enjoy retaking it every year or two and comparing the change.</div>
       </div>
-      <div style="background: rgba(122,31,31,0.06); border: 1.5px dashed var(--maroon); border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
+      <div style="background: rgba(0,0,0,0.06); border: 1.5px dashed var(--maroon); border-radius: 12px; padding: 18px 20px; margin: 26px 0;">
         <h2>Check Your Own Score</h2>
-        <p>Numbers only mean something when they are yours. <a href="/" style="color: var(--maroon); font-weight: 700;">Take the Rice Purity Test</a> — 100 questions, an instant score, and answers that never leave your device. Then read the full <a href="/blog/rice-purity-test-score-meaning/" style="color: var(--maroon); font-weight: 700;">Rice Purity Test score meaning</a> chart to see exactly where your result sits. To see how your number compares with the ranges for your age group, read the <a href="/average-rice-purity-score-by-age/" style="color: var(--maroon); font-weight: 700;">average Rice Purity Score by age</a>, and for the century-old story behind the list, try <a href="/blog/history-of-the-test.html" style="color: var(--maroon); font-weight: 700;">the history of the Rice Purity Test</a>, and for the questions people ask most, see <a href="/blog/faq.html" style="color: var(--maroon); font-weight: 700;">the Rice Purity Test FAQ</a>.</p>
+        <p>Numbers only mean something when they are yours. <a href="/">Take the Rice Purity Test</a> — 100 questions, an instant score, and answers that never leave your device. Then read the full <a href="/blog/rice-purity-test-score-meaning/">Rice Purity Test score meaning</a> chart to see exactly where your result sits. To see how your number compares with the ranges for your age group, read the <a href="/average-rice-purity-score-by-age/">average Rice Purity Score by age</a>, and for the century-old story behind the list, try <a href="/blog/history-of-the-test.html">the history of the Rice Purity Test</a>, and for the questions people ask most, see <a href="/blog/faq.html">the Rice Purity Test FAQ</a>.</p>
       </div>
     </article>
   </main>
 
   <!-- Expanded Footer -->
   <footer class="site-footer">
-    <div class="footer-container">
-      <div>
-        <div class="footer-brand-line">📜 Rice Purity Test</div>
-        <div class="footer-tagline">The Ultimate Self-Reflection Life Experience Quiz</div>
-      </div>
-
-      <div>
-        <div class="footer-links-title">Important Links</div>
-      </div>
-
-      <ul class="footer-links">
-        <li><a href="/">Rice Purity Test</a></li>
-        <li><a href="/" class="active">Blogs</a></li>
-        <li><a href="/about-us/">About Us</a></li>
-        <li><a href="/contact-us/">Contact Us</a></li>
-        <li><a href="/privacy-policy/">Privacy Policy</a></li>
-        <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
-      </ul>
-
-      <div class="footer-divider"></div>
-
-      <div class="footer-copyright">
-        &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
-      </div>
+    <ul class="footer-links">
+      <li><a href="/">Rice Purity Test</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about-us/">About Us</a></li>
+      <li><a href="/contact-us/">Contact Us</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-and-conditions/">Terms and Conditions</a></li>
+      <li><a href="/#disclaimer">Disclaimer</a></li>
+    </ul>
+    <div class="footer-copyright">
+      &copy; 2026 Rice Purity Test. All rights reserved. Created for entertainment and lighthearted reflection.
     </div>
   </footer>
 
@@ -693,9 +662,6 @@
         themeToggleBtn.textContent = isDark ? '☀️' : '🌙';
       });
     }
-    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('active');
-    });
 
     initTheme();
     </script>
