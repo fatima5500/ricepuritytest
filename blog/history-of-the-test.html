@@ -442,7 +442,14 @@
         gap: 14px;
       }
     }
-  </style>
+      /* Header navigation (hub style: plain, non-sticky) */
+    .site-header { text-align: center; padding: 12px 12px 10px; border-bottom: 1px solid #1a1a1a; }
+    .header-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 26px; }
+    .header-nav a { font-family: Georgia, 'Times New Roman', serif; font-size: 0.95rem; color: #1a1a1a; text-decoration: none; }
+    .header-nav a:hover { text-decoration: underline; }
+    body.dark-mode .site-header { border-bottom-color: #e8e0c8; }
+    body.dark-mode .header-nav a { color: #e8e0c8; }
+</style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta property="og:title" content="The History of the Rice Purity Test - Rice Purity Test">
   <meta property="og:description" content="Discover the fascinating history of the Rice Purity Test, from its 1924 origins at Rice University dorms to modern internet culture and digital viral trends.">
@@ -550,6 +557,16 @@
   </style>
 </head>
 <body>
+
+  <!-- Header navigation: page links (hub style) -->
+  <header class="site-header">
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="/">Rice Purity Test</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about-us/">About Us</a>
+      <a href="/contact-us/">Contact Us</a>
+    </nav>
+  </header>
 
   <!-- Navigation -->
   <!-- Plain utility row: theme + language (kept working, restyled plainly) -->
